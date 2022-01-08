@@ -21,3 +21,9 @@
 <li>실전! 스프링 DB 접근 기술 <span style="margin-bottom: 0.2rem; margin-top: 0.2rem; padding: 0.1rem 0.2rem; background-color: #e0e0e0; border-radius: 0.8rem; font-size: 0.8rem;">&nbsp;출시 예정&nbsp;</span>&nbsp;</li>
 <li>실전! 스프링 부트&nbsp;&nbsp;<span style="margin-bottom: 0.2rem; margin-top: 0.2rem; padding: 0.1rem 0.2rem; background-color: #e0e0e0; border-radius: 0.8rem; font-size: 0.8rem;">&nbsp;출시 예정&nbsp;</span>&nbsp;</li>
 </ul>
+<h1>공부 정리</h1>
+<h2>정적 컨텐츠</h2>
+<p>스프링 컨테이너에 매핑과 관련 컨트롤러 존재하지 않는다.</p>
+<p>그래서 resource: static/index.html 찾아서 반환한다.</p>
+<h4>실행</h4>
+<p>http://localhost:8080/index.html</p>
