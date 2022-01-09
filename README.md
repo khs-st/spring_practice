@@ -41,7 +41,7 @@
 <p><img src="https://user-images.githubusercontent.com/64995062/148678681-dc08d789-0234-43a8-8f8b-3c4f4463f925.png" alt="MVC 이미지"></p>
 <h3>1-3. API</h3>
 <h4>@ResponseBody 문자 반환</h4>
-<p>@ResponseBody 를 사용하면 뷰 리졸버( viewResolver )를 사용하지 않는다.<br>
-대신에 HTTP의 BODY에 문자 내용을 직접 반환(HTML BODY TAG를 말하는 것이 아님)</p>
+ -> @ResponseBody 를 사용하면 뷰 리졸버( viewResolver )를 사용하지 않는다.
+대신에 HTTP의 BODY에 문자 내용을 직접 반환(HTML BODY TAG를 말하는 것이 아님)
 <h4>@ResponseBody 객체 반환</h4>
-@ResponseBody 를 사용하고, 객체를 반환하면 객체가 JSON으로 변환됨
+ -> @ResponseBody 를 사용하고, 객체를 반환하면 객체가 JSON으로 변환됨
