@@ -40,6 +40,7 @@
 <p>MVC: Model, View, Controller</p>
 <p><img src="https://user-images.githubusercontent.com/64995062/148678681-dc08d789-0234-43a8-8f8b-3c4f4463f925.png" alt="MVC 이미지"></p>
 <h3>1-3. API</h3>
+<p><img src="https://user-images.githubusercontent.com/64995062/148678761-2abe6f0d-55e1-475d-ab4e-48e1c5b9f7da.png" alt="API 이미지"></p>
 <h4>@ResponseBody 문자 반환</h4>
  -> @ResponseBody 를 사용하면 뷰 리졸버( viewResolver )를 사용하지 않는다.
 대신에 HTTP의 BODY에 문자 내용을 직접 반환(HTML BODY TAG를 말하는 것이 아님)
