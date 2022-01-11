@@ -27,7 +27,7 @@ class MemberServiceTest {
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);
-    }z
+    }
 
     //종료 시 데이터 초기화
     @AfterEach
