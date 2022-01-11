@@ -78,4 +78,11 @@
 </ul>
 </li>
 <li>1-4-5. 회원 서비스 테스트</li>
+<ul>
+<li>회원서비스 생성 - MemberServiceTest.java</li>
+<li>회원가입, 전체 회원 조회, 회원 단일 조회 기능 테스트</li>
+<li>테스트 생성 후 테스트 도중 기존 코드의 <br>
+MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있어<br>
+동일한 memberRepository를 사용하도록 코드 수정하였다. -> Dependency Injection</li>
+</ul>
 </ul>
