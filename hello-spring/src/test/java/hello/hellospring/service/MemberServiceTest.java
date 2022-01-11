@@ -22,13 +22,12 @@ class MemberServiceTest {
 
     //동일한 memberRepository 사용
     //@BeforeEach -> 각 테스트 실행 전에 호출된다.
-    //테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고,
-    //의존관계도 새로 맺어준다.
+    //테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.
     @BeforeEach
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);
-    }
+    }z
 
     //종료 시 데이터 초기화
     @AfterEach
