@@ -19,6 +19,7 @@ class MemberServiceTest {
     //MemberService의 코드 수정으로 인해서 여기도 수정
     MemberService memberService;
     MemoryMemberRepository memberRepository;
+
     //동일한 memberRepository 사용
     @BeforeEach
     public void beforeEach(){
@@ -26,6 +27,7 @@ class MemberServiceTest {
         memberService = new MemberService(memberRepository);
     }
 
+    //종료 시 데이터 초기화
     @AfterEach
     public void afterEach(){
         memberRepository.clearStore();
