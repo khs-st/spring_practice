@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {
 
     //static으로 되어 있긴 해서 상관없지만 static이 아니라면 new로 다른 객체로 생성되면
@@ -19,10 +19,21 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     //MemberRepository를 외부에서 넣어주도록 하였다. -> Dependency Injection
-    @Autowired
+
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
+
+    //스프링 빈으로 등록하지 않고 내가 직접 생성한 객체에서는 동작하지 않는다.
+    /*@Autowired
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
+    //여기서도 Auotwired 동작하지 않는다. 스프링 컨테이너에 올라가는것들만 Autowired 동작하기 떄문에.
+    public static void main(String[] args){
+        MemberService memberService = new MemberService();
+    }
+    */
 
     /**
      * 회원 가입

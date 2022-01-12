@@ -85,4 +85,29 @@
 MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있어<br>
 동일한 memberRepository를 사용하도록 코드 수정하였다. -> Dependency Injection</li>
 </ul>
+<li>1-4-6. 스프링 빈과 의존관계</li>
+<ul>
+<li>컴포넌트 스캔과 자동 의존관계 설정
+<ul>
+<li>회원 컨트롤러가 회원서비스와 회원 리포지토리를 사용할 수 있게 의존관계</li>
+<li>생성자에 @Autowired 가 있으면 스프링이 연관된 객체를 스프링 컨테이너에서 찾아서 넣어준다. <br>
+이렇게 객체 의존관계를 외부에서 넣어주는 것을 DI (Dependency Injection), 의존성 주입이라 한다.</li>
+<li>스프링 빈을 등록하는 2가지 방법<br>
+ - 컴포넌트 스캔과 자동 의존관계 설정<br>
+ - 자바 코드로 직접 스프링 빈 등록하기</li>
+<li>컴포넌트 스캔으로 자동 의존관계 설정하기<br>
+<br>★ 컴포넌트 스캔 원리<br>1. @Component 애노테이션이 있으면 스프링 빈으로 자동 등록된다.<br>
+2. @Controller 컨트롤러가 스프링 빈으로 자동 등록된 이유도 컴포넌트 스캔 때문이다.
+<br>3. @Component 를 포함하는 다음 애노테이션도 스프링 빈으로 자동 등록된다.(@Controller, @Service, @Repository)
+<br><br>
+★ 자바 코드로 직접 스프링 빈 등록하기 - 생성자 주입
+<br>1. MemberService.java의 @Service와 @Autowired 어노테이션 제거
+<br>2. MemoryMemberRepository.java의 @Repository 어노테이션 제거
+<br>3. SpringConfig.java 생성 후 @Configuration 과 @Bean 어노테이션 이용하여 직접 스프링 빈 등록(memberRepository())
+<br><br> - 장점: 설정파일 즉 SpringConfig.java에서 MemoryMemberRepository 대신 다른 Repository로 변경 가능하다.(상황에 따라 구현클래스 변경이 가능하다.)
+<br><br> - 단점: 스프링 빈으로 등록하지 않고 내가 직접 생성한 객체에서는 동작하지 않는다.
+</li>
+</ul>
+</li>
+</ul>
 </ul>
