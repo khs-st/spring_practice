@@ -14,6 +14,8 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Member save(Member member) {
+        //아아디 getId로 가져오기
+        //member.setId(member.getId());
         //시퀀스 증가 후 아이디 넣기
         member.setId(++sequence);
         store.put(member.getId(), member);
