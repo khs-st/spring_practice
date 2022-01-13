@@ -85,7 +85,7 @@
 MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있어<br>
 동일한 memberRepository를 사용하도록 코드 수정하였다. -> Dependency Injection</li>
 </ul>
-<li>1-4-6. 스프링 빈과 의존관계</li>
+<li>1-4-6. 스프링 빈과 의존관계
 <ul>
 <li>컴포넌트 스캔과 자동 의존관계 설정
 <ul>
@@ -110,4 +110,16 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 </ul>
 </li>
 </ul>
+<li>1-4-7. 회원 웹 기능 - 홈 화면 추가
+<ul>
+<li>HomeController.java 생성</li>
+<li>home.html 생성</li>
+</ul>
+</li>
+<li>1-4-8. 회원 웹 기능 - 등록
+<ul>
+<li>MemberController.java - 회원 목록 조회 기능 추가</li>
+<li>memberList.html 생성</li>
+</ul>
+</li>
 </ul>
