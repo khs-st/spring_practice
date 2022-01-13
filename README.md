@@ -110,4 +110,22 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 </ul>
 </li>
 </ul>
+<li>1-4-7. 회원 웹 기능 - 홈 화면 추가
+<ul>
+<li>HomeController.java 생성</li>
+<li>home.html 생성</li>
+</ul>
+</li>
+<li>1-4-8. 회원 웹 기능 - 등록
+<ul>
+<li>MemberController.java - 회원 목록 등록 기능 추가</li>
+<li>createMemberForm.html 생성</li>
+</ul>
+</li>
+<li>1-4-9. 회원 웹 기능 - 조회 및 등록
+<ul>
+<li>MemberController.java - 회원 목록 조회 기능 추가</li>
+<li>memberList.html 생성 - 반복문으로 member의 list 조회</li>
+</ul>
+</li>
 </ul>
