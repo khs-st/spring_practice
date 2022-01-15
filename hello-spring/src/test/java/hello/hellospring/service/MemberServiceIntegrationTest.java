@@ -1,40 +1,28 @@
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
+import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-//단위테스트
-class MemberServiceTest {
-    
-    //MemberService 메서드 사용 위해서
-    //MemberService memberService = new MemberService();
-    //데이터 중복 막기 위해서
-    //MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+//통합테스트
+// 스프링 컨테이너와 테스트를 함께 실행한다.
+@SpringBootTest
+// @Transactional로 테스트 시작 전 트랜잭션 실행시켜 테스트 완료 후 롤백시켜 데이터 지워준다.
+// -> 다음 테스트 반복 가능(기존에는 지웠어야 반복이 가능 했다.)
+@Transactional
+class MemberServiceIntegrationTest {
 
-    //MemberService의 코드 수정으로 인해서 여기도 수정
-    MemberService memberService;
-    MemoryMemberRepository memberRepository;
-
-    //동일한 memberRepository 사용
-    //@BeforeEach -> 각 테스트 실행 전에 호출된다.
-    //테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.
-    @BeforeEach
-    public void beforeEach(){
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
-    }
-
-    //종료 시 데이터 초기화
-    @AfterEach
-    public void afterEach(){
-        memberRepository.clearStore();
-    }
+    @Autowired MemberService memberService;
+    @Autowired MemberRepository memberRepository;
 
     /**
      * 회원 가입 테스트
@@ -68,15 +56,7 @@ class MemberServiceTest {
         memberService.join(member1);
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
         assertThat(e.getMessage()).isEqualTo("중복된 회원입니다.");
-        //assertThrows(IllegalStateException.class,() -> memberService.join(member2));
-/*        try{
-            memberService.join(member2);
-            fail();
-        } catch (IllegalStateException e){
-            assertThat(e.getMessage()).isEqualTo("중복된 회원입니다.");
-        }*/
 
-        //then
     }
 
     /**
