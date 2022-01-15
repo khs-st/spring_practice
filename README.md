@@ -140,6 +140,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 <li>application.properties 파일에 스프링 부트 데이터베이스 연결 설정 추가</li>
 <li>build.gradle 파일에 jdbc, h2 데이터베이스 관련 라이브러리 추가</li>
 <li>JdbcMemberRepository.java 생성 - 예전 개발자 방식</li>
+<li>기존 코드는 건들지 않고 SpringConfig.java 코드안의 구현체 변경(JdbcMemberRepository로 변경)으로 인한 편리하다.</li>
+<p><img src="https://user-images.githubusercontent.com/64995062/149610165-b52338dc-5fd5-453c-a0be-3203751788e4.png" alt="구현체 변경"></p>
 </ul>
 </li>
 </ul>
