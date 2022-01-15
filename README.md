@@ -144,4 +144,38 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 <p><img src="https://user-images.githubusercontent.com/64995062/149610165-b52338dc-5fd5-453c-a0be-3203751788e4.png" alt="구현체 변경"></p>
 </ul>
 </li>
+<li>1-4-12. 스프링 통합 테스트
+<ul>
+<li>MemberServiceIntegrationTest.java 생성 -> @SpringBootTest, @Transactional 어노테이션 활용</li>
+<li>스프링 컨테이너와 DB까지 연결한 통합 테스트 진행.</li>
+</ul>
+</li>
+<li>1-4-13. 스프링 JdbcTemplate
+<ul>
+<li>순수 Jdbc와 동일한 환경설정</li>
+<li>JdbcTemplate을 사용하도록 SpringConfig.java 수정</li>
+<li>MemberServiceIntegrationTest로 테스트 완료</li>
+</ul>
+</li>
+<li>1-4-14. JPA
+<ul>
+<li>JPA는 기존 반복 코드 및 기본적인 SQL도 직접 만들어서 실행해준다.</li>
+<li>JPA 사용 시 SQL과 데이터 중심 설계 -> 객체 중심 설계로 전환 가능하다.</li>
+<li>JPA 사용하면 개발 생산성을 크게 높일 수 있다.</li>
+</ul>
+</li>
+<li>1-4-14. 스프링 데이터 JPA
+<ul>
+<li>스프링 데이터 JPA 사용 시 레포지토리에 구현 클래스 없이 인터페이스 만으로 개발 완료 가능하다.</li>
+<li>스프링 데이터 JPA 회원 레포지토리</li>
+<li>스프링 데이터 JPA 회원 레포지토리를 사용하도록 스프링 설정 변경</li>
+<li>스프링 데이터 JPA 제공 기능
+<ul>
+<li>인터페이스를 통한 기본적인 CRUD</li>
+<li>findByName() , findByEmail() 처럼 메서드 이름 만으로 조회 기능 제공</li>
+<li>페이징 기능 자동 제공</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
