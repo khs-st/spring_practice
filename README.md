@@ -178,4 +178,11 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 </li>
 </ul>
 </li>
+<li>1-4-15. AOP 및 AOP 적용
+<ul>
+<li>MemberService 회원 조회 시간 측정 추가</li>
+<li>공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern) 분리</li>
+<li>시간 측정 AOP 등록 - TimeTraceAop.java 추가</li>
+</ul>
+</li>
 </ul>
