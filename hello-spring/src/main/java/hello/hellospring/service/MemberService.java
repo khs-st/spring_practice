@@ -41,12 +41,22 @@ public class MemberService {
      * 회원 가입
      */
     public Long join(Member member){
-        
-        //동일한 이름 즉, 중복 이름으로 회원 가입 불가능하도록
-        // Optional 메서드 사용
-        validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
+
+        long start = System.currentTimeMillis();
+
+        try{
+            //동일한 이름 즉, 중복 이름으로 회원 가입 불가능하도록
+            // Optional 메서드 사용
+            validateDuplicateMember(member);
+            memberRepository.save(member);
+            return member.getId();
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish- start;
+            System.out.print("join = " + timeMs + "ms");
+        }
+
+
     }
 
     //동일한 이름 즉, 중복 이름으로 회원 가입 불가능하도록
@@ -62,7 +72,14 @@ public class MemberService {
      * 전체 회원 조회
      */
     public List<Member> selectAllMember(){
-         return memberRepository.findAll();
+        long start = System.currentTimeMillis();
+        try {
+            return memberRepository.findAll();
+        }finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.print("selectAllMember " + timeMs + "ms");
+        }
     }
 
     public Optional<Member> selectOneMember(Long memberId){
