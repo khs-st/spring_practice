@@ -20,6 +20,8 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
+        //실제 프록시 주입되는지 sout으로 확인
+        System.out.println("MemberService = " + memberService.getClass());
     }
     
     //url을 창에다 넣는 방식
