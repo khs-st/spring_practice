@@ -20,6 +20,8 @@
 5. [스프링 MVC 2편 - 백엔드 웹 개발 핵심 기술](#spring-mvc-backend-2)
 6. [스프링 핵심 원리 - 고급편](#example)
 
+<details>
+<summary>1. 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 정리</summary>
 <a name="spring-introduction"></a>
 <h2>1. 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술</h2>
 <h4>이 강의에서는 실제 동작하는 간단한 웹 애플리케이션을 다음 순서로 빠르게 만들어보았습니다.</h4>
@@ -186,3 +188,4 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 </ul>
 </li>
 </ul>
+</details>
