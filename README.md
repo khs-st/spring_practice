@@ -2,8 +2,8 @@
 <h2>이 저장소는 [초급~중급] 우아한형제들 기술이사 김영한의 스프링 완전 정복 수업을 듣고 공부 내용을 기록한 저장소입니다.</h2>
 <h3>#강의 링크</h3>
 <ul>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank" rel="noopener noreferrer">스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술&nbsp;</a></span> <strong>&nbsp;(22.01.08 ~)</strong></li>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8" target="_blank" rel="noopener noreferrer">스프링 핵심 원리 - 기본편</a></span></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank" rel="noopener noreferrer">스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술&nbsp;</a></span> <strong>&nbsp;(22.01.08 ~ 22.01.16)</strong></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8" target="_blank" rel="noopener noreferrer">스프링 핵심 원리 - 기본편</a></span><strong>&nbsp;(22.01.26 ~ )</strong></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" target="_blank" rel="noopener noreferrer">모든 개발자를 위한 HTTP 웹 기본 지식&nbsp;</a></span></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1" target="_blank" rel="noopener">스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</a></span></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-2" target="_blank" rel="noopener">스프링 MVC 2편 - 백엔드 웹 개발 활용 기술</a></span></li>
@@ -188,4 +188,42 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 </ul>
 </li>
 </ul>
+</details>
+
+<details>
+<summary>2. 스프링 핵심 원리 - 기본편</summary>
+<a name="spring-main-principle"></a>
+
+### 2. 스프링 핵심 원리 - 기본편
+
+### 강의 목차
+1. 객체 지향 설계와 스프링(이론위주)<br>
+2. 스프링 핵심 원리 이해1 - 예제 만들기<br>
+3. 스프링 핵심 원리 이해2 - 객체 지향 원리 적용<br>
+4. 스프링 컨테이너와 스프링 빈<br>
+5. 싱글톤 컨테이너<br>
+6. 컴포넌트 스캔<br>
+7. 의존관계 자동 주입<br>
+8. 빈 생명주기 콜백<br>
+9. 빈 스코프
+
+#### 2.2. 스프링 핵심 원리 이해1 - 예제 만들기
+
+- 프로젝트 생성
+- 비즈니스 요구사항과 설계
+  - 회원
+    - 회원가입 및 조회
+    - 회원등급 -> 일반, VIP
+    - 회원 데이터는 자체 DB 구축 가능, 외부 시스템과 연동 가능(미확정)
+  - 주문과 할인 정책
+    - 회원은 상품을 주문할 수 있다.
+    - 회원 등급에 따라 할인 정책을 적용할 수 있다.
+    - 할인 정책은 모든 VIP는 1000원을 할인해주는 고정 금액 할인을 적용해달라. (나중에 변경 될 수 있다.)
+    - 할인 정책은 변경 가능성이 높다. 회사의 기본 할인 정책을 아직 정하지 못했고, 오픈 직전까지 고민을 미루고 싶다.  최악의 경우 할인을 적용하지 않을 수도 있다. (미확정)
+- 회원 도메인 설계
+  - 회원 도메인 요구사항
+    - 회원을 가입하고 조회할 수 있다.
+    - 회원은 일반과 VIP 두 가지 등급이 있다.
+    - 회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다. (미확정)
+
 </details>
