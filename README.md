@@ -234,4 +234,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   4. 주문 결과 반환: 주문 서비스는 할인 결과를 포함한 주문 결과를 반환한다.
 
 ![image](https://user-images.githubusercontent.com/64995062/151371215-84465194-b6a2-42d3-92cc-ee61a869e9f3.png)
+
+- 주문과 할인 도메인 개발
+  - 메모리 회원 리포지토리와, 고정 금액 할인 정책을 구현체로 생성
+- 주문과 할인 도메인 실행과 테스트
 </details>
