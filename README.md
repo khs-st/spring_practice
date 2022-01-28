@@ -238,4 +238,7 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 - 주문과 할인 도메인 개발
   - 메모리 회원 리포지토리와, 고정 금액 할인 정책을 구현체로 생성
 - 주문과 할인 도메인 실행과 테스트
+- 새로운 할인 정책 개발
+  - 새로운 할인 정책으로 확장 
+  - RateDiscountPolicy 추가
 </details>
