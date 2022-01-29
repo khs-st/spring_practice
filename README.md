@@ -248,5 +248,9 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - AppConfig에서 생성자 주입으로 관심사 분리
   - MemberServiceImpl, OrderServiceImpl 수정(기능을 실행하는 책임만 지도록)
   - 테스트 코드 오류 수정
+- AppConfig 리팩터링
+  - 중복 제거, 역할에 따른 구현이 보이도록 리팩터링
+  - MemoryMemberRepository를 다른 구현체로 변경할 때 한 부분만 변경하면 된다.
+  - 애플리케이션 전체 구성이 어떻게 되어있는지 빠르게 파악 가능하다.
 
 </details>

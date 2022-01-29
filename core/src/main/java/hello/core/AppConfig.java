@@ -13,15 +13,24 @@ public class AppConfig {
     
     //생성자 주입 이용하여 관심사 분리
     //객체 인스턴스의 참조(레퍼런스)를 생성자를 통해서 주입(연결)
-
+    
     //MemberServiceImpl -> MemoryMemberRepository
+    //AppConfig 리팩토링
     public MemberService memberService(){
-        return new MemberServiceImpl(new MemoryMemberRepository());
+
+        return new MemberServiceImpl(memberRepository());
+    }
+
+    public MemberRepository memberRepository(){
+        return new MemoryMemberRepository();
     }
 
     //OrderServiceImpl -> MemoryMemberRepository , FixDiscountPolicy
     public OrderService orderService() {
-        return new OrderServiceImpl(new FixDiscountPolicy(), new MemoryMemberRepository());
+        return new OrderServiceImpl(discountPolicy(), memberRepository());
     }
 
+    public DiscountPolicy discountPolicy(){
+        return new FixDiscountPolicy();
+    }
 }
