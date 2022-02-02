@@ -254,6 +254,9 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - 애플리케이션 전체 구성이 어떻게 되어있는지 빠르게 파악 가능하다.
 - 새로운 구조와 할인 정책 적용
   - AppConfig의 할인 정책 역할을 담당하는 구현을 FixDiscountPolicy -> RateDiscountPolicy객체로 변경
-
+- 스프링으로 전환하기
+  - AppConfig의 메서드에 Configuration, Bean 어노테이션 설정
+  - MemberApp, OrderApp에 스프링 컨테이너 적용
+  - ApplicationContext -> 스프링 컨테이너라고 한다. 스프링 컨테이너를 통해 필요한 스프링 빈(객체)를 찾는다.
 
 </details>
