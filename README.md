@@ -271,6 +271,7 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 - 스프링 빈 조회 - 상속 관계
 - BeanFactory와 ApplicationContext
 - 다양한 설정 형식 지원 - 자바 코드, XML
-
+- 스프링 빈 설정 메타 정보 - BeanDefinition
+  - 스프링이 다양한 형태의 설정 정보를 BeanDefinition으로 추상화해서 사용한다.
 
 </details>
