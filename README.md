@@ -269,5 +269,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - 구체 타입으로 조회하면 변경시 유연성이 떨어진다.
 - 스프링 빈 조회 - 동일한 타입이 둘 이상
 - 스프링 빈 조회 - 상속 관계
+- BeanFactory와 ApplicationContext
+- 다양한 설정 형식 지원 - 자바 코드, XML
+
 
 </details>
