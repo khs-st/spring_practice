@@ -1,8 +1,12 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * 회원 서비스 구현체
  */
+@Component
 public class MemberServiceImpl implements MemberService{
 
     //회원 도메인 설계의 문제점
@@ -13,7 +17,10 @@ public class MemberServiceImpl implements MemberService{
     //해결을 위해 수정
     //MemberServiceImpl 은 MemoryMemberRepository 를 의존하지 않는다!
     private final MemberRepository memberRepository;
-
+    
+    //의존관계 자동 주입
+    //Autowired는 ac.getBean(MemberRepository.class)와 동일한 코드이다.
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
