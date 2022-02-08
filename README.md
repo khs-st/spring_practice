@@ -321,6 +321,7 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
     - @Repository : 스프링 데이터 접근 계층에서 사용
     - @Configuration : 스프링 설정 정보에서 사용
 - 필터
+- 중복 등록과 충돌
 
 
 </details>
