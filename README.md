@@ -313,5 +313,14 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 - 컴포넌트 스캔과 의존관계 자동 주입 시작하기
   - 컴포넌트 스캔 -> @Component 가 붙은 모든 클래스를 스프링 빈으로 등록한다
   - @Autowired 의존관계 자동 주입
+- 탐색 위치와 기본 스캔 대상
+  - 컴포넌트 스캔 기본 대상
+    - @Component : 컴포넌트 스캔에서 사용
+    - @Controlller : 스프링 MVC 컨트롤러에서 사용
+    - @Service : 스프링 비즈니스 로직에서 사용
+    - @Repository : 스프링 데이터 접근 계층에서 사용
+    - @Configuration : 스프링 설정 정보에서 사용
+
+
 
 </details>
