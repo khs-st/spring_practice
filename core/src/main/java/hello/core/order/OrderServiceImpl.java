@@ -18,6 +18,22 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;
     private final MemberRepository memberRepository;
 
+    //수정자 주입(setter 주입) -> 자바빈 프로퍼티 규약
+    /*private DiscountPolicy discountPolicy2;
+    private MemberRepository memberRepository2;
+
+    @Autowired
+    public void setDiscountPolicy2(DiscountPolicy discountPolicy2) {
+        this.discountPolicy2 = discountPolicy2;
+    }
+
+    @Autowired
+    public void setMemberRepository2(MemberRepository memberRepository2) {
+        this.memberRepository2 = memberRepository2;
+    }*/
+
+    //생성자가 딱 1개만 있으면 @Autowired를 생략해도 자동 주입 된다.
+    //물론 스프링 빈에만 해당한다.
     @Autowired
     public OrderServiceImpl(DiscountPolicy discountPolicy, MemberRepository memberRepository) {
         this.discountPolicy = discountPolicy;
