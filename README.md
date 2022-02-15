@@ -336,5 +336,13 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
       - 스프링 설정을 목적으로 하는 @Configuration 같은 곳에서만 특별한 용도로 사용
   - 일반 메서드 주입
     - 특징: 한번에 여러 필드를 주입 받을 수 있으며 일반적으로 잘 사용하지 않는다.
+- 옵션 처리
+  - 자동 주입 대상을 옵션으로 처리하는 방법
+    -@Autowired(required=false) : 자동 주입할 대상이 없으면 수정자 메서드 자체가 호출 안됨
+    -org.springframework.lang.@Nullable : 자동 주입할 대상이 없으면 null이 입력된다.
+    -Optional<> : 자동 주입할 대상이 없으면 Optional.empty 가 입력된다.
+
+
+
 
 </details>
