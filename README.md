@@ -345,6 +345,12 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - 불변, 누락, final 키워드(생성자 주입을 사용하면 필드에 final 키워드를 사용할 수 있다.)
 - 롬복과 최신 트랜드
   - 롬복 라이브러리 적용 방법
-
+- 조회 빈이 2개 이상 - 문제
+- @Autowired 필드 명 매칭, @Qualifier, @Primary - 해결
+  - @Autowired 필드 명 매칭: @Autowired 는 타입 매칭을 시도하고, 이때 여러 빈이 있으면 필드 이름, 파라미터 이름으로 빈 이름을 추가
+매칭한다.
+  - @Qualifier: 추가 구분자를 붙여주는 방법
+    - 하지만 경험상 @Qualifier를 찾는 용도로만 사용하는게 명확하고 좋다.
+  - @Primary: 우선순위를 정하는 방법
 
 </details>
