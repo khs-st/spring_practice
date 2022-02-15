@@ -343,7 +343,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
     -Optional<> : 자동 주입할 대상이 없으면 Optional.empty 가 입력된다.
 - 생성자 주입을 선택하라
   - 불변, 누락, final 키워드(생성자 주입을 사용하면 필드에 final 키워드를 사용할 수 있다.)
-
+- 롬복과 최신 트랜드
+  - 롬복 라이브러리 적용 방법
 
 
 </details>
