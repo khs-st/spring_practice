@@ -12,11 +12,17 @@ import org.springframework.stereotype.Component;
 //@RequiredArgsConstructor
 // -> 롬복이 자바의 애노테이션 프로세서라는 기능을 이용해서
 // 컴파일 시점에 생성자 코드를 자동으로 생성해준다.
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private final DiscountPolicy discountPolicy;
     private final MemberRepository memberRepository;
+
+    @Autowired
+    public OrderServiceImpl(DiscountPolicy rateDiscountPolicy, MemberRepository memberRepository){
+        this.discountPolicy = rateDiscountPolicy;
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice){
