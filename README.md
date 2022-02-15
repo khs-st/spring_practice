@@ -352,5 +352,9 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - @Qualifier: 추가 구분자를 붙여주는 방법
     - 하지만 경험상 @Qualifier를 찾는 용도로만 사용하는게 명확하고 좋다.
   - @Primary: 우선순위를 정하는 방법
+    - 메인 데이터베이스의 커넥션을 획득하는 스프링 빈은 @Primary 를 적용해서 조회하는 곳에서 @Qualifier
+지정 없이 편리하게 조회하고, 서브 데이터베이스 커넥션 빈을 획득할 때는 @Qualifier 를 지정해서
+명시적으로 획득 하는 방식으로 사용하면 코드를 깔끔하게 유지할 수 있다.
+ - @Primary보다 @Qualifier가 우선권이 높다
 
 </details>
