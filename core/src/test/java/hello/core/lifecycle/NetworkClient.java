@@ -1,5 +1,8 @@
 package hello.core.lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 //간단하게 외부 네트워크에 미리 연결하는 객체
 public class NetworkClient {
 
@@ -29,11 +32,15 @@ public class NetworkClient {
         System.out.println("close: " + url);
     }
 
+    //@PostConstruct , @PreDestroy
+    //이 두 애노테이션을 사용하면 가장 편리하게 초기화와 종료를 실행할 수 있다.
+    @PostConstruct
     public void init() {
         System.out.println("NetworkClient.init");
         connect();
         call("초기화 연결 메시지");
     }
+    @PreDestroy
     public void close() {
         System.out.println("NetworkClient.close");
         disconnect();
