@@ -3,6 +3,7 @@ package hello.core.scope;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
 
@@ -37,21 +38,27 @@ public class SingletonWithPrototypeTest1 {
 
         int count2 = clientBean2.logic();
         System.out.println("clientBean2.logic = "+count2);
-        Assertions.assertThat(count2).isEqualTo(2);
+        Assertions.assertThat(count1).isEqualTo(1);
+        Assertions.assertThat(count2).isEqualTo(1);
     }
 
     @Scope("singleton")
     static class ClientBean{
-        private final PrototyeBean prtotypeBean;
+        //private final PrototyeBean prtotypeBean;
 
         @Autowired
+        ApplicationContext applicationContext;
+
+        /*@Autowired
         public ClientBean(PrototyeBean prototyeBean){
             this.prtotypeBean=prototyeBean;
-        }
+        }*/
 
         public int logic(){
-            prtotypeBean.addCount();
-            int count = prtotypeBean.getCount();
+            //프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제 해결방법
+            PrototyeBean prototypeBean = applicationContext.getBean(PrototyeBean.class);
+            prototypeBean.addCount();
+            int count = prototypeBean.getCount();
             return count;
         }
 
