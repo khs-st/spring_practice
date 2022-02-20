@@ -38,27 +38,22 @@ public class SingletonWithPrototypeTest1 {
 
         int count2 = clientBean2.logic();
         System.out.println("clientBean2.logic = "+count2);
-        Assertions.assertThat(count1).isEqualTo(1);
-        Assertions.assertThat(count2).isEqualTo(1);
+        Assertions.assertThat(count2).isEqualTo(2);
     }
 
     @Scope("singleton")
     static class ClientBean{
-        //private final PrototyeBean prtotypeBean;
+        private final PrototyeBean prtotypeBean;
 
         @Autowired
-        ApplicationContext applicationContext;
-
-        /*@Autowired
         public ClientBean(PrototyeBean prototyeBean){
             this.prtotypeBean=prototyeBean;
-        }*/
+        }
 
         public int logic(){
-            //프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제 해결방법
-            PrototyeBean prototypeBean = applicationContext.getBean(PrototyeBean.class);
-            prototypeBean.addCount();
-            int count = prototypeBean.getCount();
+            ApplicationContext ac = new AnnotationConfigApplicationContext(PrototyeBean.class);
+            prtotypeBean.addCount();
+            int count = prtotypeBean.getCount();
             return count;
         }
 
