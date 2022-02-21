@@ -2,6 +2,7 @@ package hello.core.scope;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -46,12 +47,18 @@ public class SingletonWithPrototypeTest1 {
         private final PrototyeBean prtotypeBean;
 
         @Autowired
+        private ObjectProvider<PrototyeBean> prototypeBeanProvider;
+
+        @Autowired
         public ClientBean(PrototyeBean prototyeBean){
             this.prtotypeBean=prototyeBean;
         }
 
         public int logic(){
-            ApplicationContext ac = new AnnotationConfigApplicationContext(PrototyeBean.class);
+            //ApplicationContext ac = new AnnotationConfigApplicationContext(PrototyeBean.class);
+            //ObjectProvider 의 getObject() 를 호출하면 내부에서는 스프링 컨테이너를 통해 해당 빈을 찾아서 반환한다.(DL)
+            //ObjectProvider: ObjectFactory 상속, 옵션, 스트림 처리등 편의 기능이 많고, 별도의 라이브러리 필요없음, 스프링에 의존
+            PrototyeBean prototyeBean = prototypeBeanProvider.getObject();
             prtotypeBean.addCount();
             int count = prtotypeBean.getCount();
             return count;
