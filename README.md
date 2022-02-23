@@ -403,6 +403,6 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 - 웹 스코프
   - 특징: 웹 환경에서만 동작하며, 프로토타입과 다르게 스프링이 해당 스코프의 종료시점까지 관리한다. 따라서 종료 메서드가 호출된다
   - 종류: request, session, application, websocket
-
+- request 스코프 예제 만들기
 
 </details>
