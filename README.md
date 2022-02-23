@@ -405,5 +405,9 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - 종류: request, session, application, websocket
 - request 스코프 예제 만들기
 - 스코프와 Provider
+- 스코프와 프록시
+  - proxyMode = ScopedProxyMode.TARGET_CLASS 추가
+  - 가짜 프록시 클래스를 만들어두고 HTTP request와 상관 없이 가짜 프록시 클래스를 다른 빈에 미리 주입해 둘 수 있다.
+  - 주의점: 마치 싱글톤을 사용하는 것 같지만 다르게 동작하기 때문에 결국 주의해서 사용해야 한다.
 
 </details>
