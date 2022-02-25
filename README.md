@@ -3,8 +3,8 @@
 <h3>#강의 링크</h3>
 <ul>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank" rel="noopener noreferrer">스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술&nbsp;</a></span> <strong>&nbsp;(22.01.08 ~ 22.01.16)</strong></li>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8" target="_blank" rel="noopener noreferrer">스프링 핵심 원리 - 기본편</a></span><strong>&nbsp;(22.01.26 ~ )</strong></li>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" target="_blank" rel="noopener noreferrer">모든 개발자를 위한 HTTP 웹 기본 지식&nbsp;</a></span></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8" target="_blank" rel="noopener noreferrer">스프링 핵심 원리 - 기본편</a></span><strong>&nbsp;(22.01.26 ~ 22.02.23)</strong></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" target="_blank" rel="noopener noreferrer">모든 개발자를 위한 HTTP 웹 기본 지식</a></span><strong>&nbsp;(22.02.25 ~ )</strong></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1" target="_blank" rel="noopener">스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</a></span></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-2" target="_blank" rel="noopener">스프링 MVC 2편 - 백엔드 웹 개발 활용 기술</a></span></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89%ED%8E%B8" target="_blank" rel="noopener">스프링 핵심 원리 - 고급편</a></span></li>
@@ -409,5 +409,79 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - proxyMode = ScopedProxyMode.TARGET_CLASS 추가
   - 가짜 프록시 클래스를 만들어두고 HTTP request와 상관 없이 가짜 프록시 클래스를 다른 빈에 미리 주입해 둘 수 있다.
   - 주의점: 마치 싱글톤을 사용하는 것 같지만 다르게 동작하기 때문에 결국 주의해서 사용해야 한다.
+
+</details>
+<details>
+<summary>3. 모든 개발자를 위한 HTTP 웹 기본 지식</summary>
+<a name="for-all-devleop-http-intel"></a>
+
+### 3. 모든 개발자를 위한 HTTP 웹 기본 지식
+
+### 강의 목차
+1. 인터넷 네트워크
+2. URI와 웹 브라우저 요청 흐름
+3. HTTP 기본
+4. HTTP 메서드
+5. HTTP 메서드 활용
+6. HTTP 상태코드
+7. HTTP 헤더1 - 일반 헤더
+8. HTTP 헤더2 - 캐시와 조건부 요청
+
+#### 3.1. 인터넷 네트워크
+- 인터넷 통신
+- IP(인터넷 프로토콜)
+  - IP 프로토콜의 한계: 비연결성, 비신뢰성, 프로그램 구분
+- TCP, UDP
+  - TCP 특징: 연결지향, 데이터 전달 보증, 순서 보장, 신뢰 가능한 프로토콜
+  - UDP 특징: 연결지향X, 데이터 전달 보증X, 순서 보장X, IP와 거의 비슷하며 단순하고 빠르다.
+- PORT
+  - 같은 IP 내에서 프로세스 구분
+  - FTP: 20, 21
+  - TELNET: 23
+  - HTTP: 80
+  - HTTPS: 443
+- DNS
+  - 도메인 명, 도메인 명을 IP주소로 변환
+
+#### 3.2. URI와 웹 브라우저 요청 흐름
+- URI, URL, URN
+  - URI: 로케이터(locator), 이름(name) 또는 둘 다 추가로 분류될 수 있다.
+  - URL(Locator): 리소스가 있는 위치를 지정
+  - URN(Name): 리소스에 이름을 부여
+- 웹 브라우저 요청 흐름
+
+#### 3.3. HTTP 기본
+- 모든 것이 HTTP
+  - HTTP 특징: 클라이언트 서버 구조, 무상태 프로토콜(Stateless), 비연결성, 단순함, 확장 가능
+- 클라이언트 서버 구조
+  - Request Response 구조, 클라이언트는 서버에 요청 보내고 응답 대기
+- Stateful, Stateless
+  - 상태 유지(Stateful): 항상 같은 서버가 유지되어야 한다.
+    - 문제점: 중간에 서버 장애나면 다시 요청해야한다.
+  - 무상태 프로토콜(Stateless): 서버가 클라이언트의 상태를 보존X
+    - 장점: 서버 확장성 높다. 중간에 서버가 장애나도 다른 서버로 전달하여 처리가 가능하다.
+    - 단점: 클라이언트가 추가 데이터 전송(데이터를 많이 보낸다.)
+  - 실무 한계: 상태 유지는 최소한만 사용(예시: 로그인)
+- 비연결성(connectionless)
+  - HTTP는 기본이 연결을 유지하지 않으며 서버 자원을 매우 효율적으로 사용할 수 있다.
+  - 단점 
+    - TCP/IP 연결을 새로 맺어야 하기 때문에 3 way handshake 시간이 추가된다.
+    - 웹 브라우저로 사이트 요청 시 수 많은 자원이 함께 다운로드 된다.
+  - 지금은 HTTP 지속 연결(Persistent Connections)로 문제 해결
+  - 대용량 트래픽(선착순, 예약 등) -> 스테이트리스!!!!
+- HTTP 메시지
+  - HTTP 메시지 구조
+  - ![image](https://user-images.githubusercontent.com/64995062/155681132-1ebc4bae-e225-46af-a1da-82d39053ff7b.png)
+  - 시작 라인(요청 메시지)
+    - 요청 메시지 - HTTP 메서드(GET: 조회, POST: 요청 내역 처리, PUT, DELETE...)
+    - 요청 대상 - 절대경로= "/" 로 시작하는 경로
+    - HTTP Version
+  - 시작 라인(응답 메시지)
+    - HTTP 버전, HTTP 상태 코드(요청 성공, 실패를 나타냄 예시: 200, 400, 500 등)
+    - 이유 문구
+  - HTTP 헤더
+    - HTTP 전송에 필요한 모든 부가정보, 필요시 임의의 헤더 추가 가능
+  - HTTP 메시지 바디 -> 실제 전송할 데이터, byte로 표현 가능한 모든 데이터 전송 가능
+- 단순함 확장 가능
 
 </details>
