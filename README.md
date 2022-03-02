@@ -484,4 +484,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - HTTP 메시지 바디 -> 실제 전송할 데이터, byte로 표현 가능한 모든 데이터 전송 가능
 - 단순함 확장 가능
 
+#### 3.4. HTTP 메서드
+- HTTP API를 만들어보자
+- HTTP 메서드 - GET, POST
+- HTTP 메서드 - PUT, PATCH, DELETE
+- HTTP 메서드의 속성
+
 </details>
