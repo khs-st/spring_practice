@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 //JPA 엔티티 매핑
 @Getter
 // 기본 생성자 자동 추가
-// public Posts(){}와 같은 효과
+// public Memeber(){}와 같은 효과
 @NoArgsConstructor
 @Entity
 public class Member {
