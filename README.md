@@ -559,5 +559,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - 편의 기능 제공
    - Content-Type, 쿠키, Redirect
 
+ - HTTP 응답 데이터 - API JSON
+  - HTTP 응답으로 JSON을 반환할 때는 content-type을 application/json 로 지정해야 한다.
+    - Jackson 라이브러리가 제공하는 objectMapper.writeValueAsString() 를 사용하면 객체를 JSON 
+문자로 변경할 수 있다.
+  - application/json은 스펙상 utf-8 형식을 사용하도록 정의되어 있다.
 
 </details>
