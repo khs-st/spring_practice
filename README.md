@@ -490,4 +490,20 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 - HTTP 메서드 - PUT, PATCH, DELETE
 - HTTP 메서드의 속성
 
+<details>
+<summary>스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</summary>
+<a name="#spring-mvc-backend-1"></a>
+
+### 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
+
+1. 웹 애플리케이션 이해
+2. 서블릿
+3. 서블릿, JSP, MVC 패턴
+4. MVC 프레임워크 만들기
+5. 스프링 MVC - 구조 이해
+6. 스프링 MVC - 기본 기능
+7. 스프링 MVC - 웹 페이지 만들기
+
+</details>
+
 </details>
