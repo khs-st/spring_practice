@@ -492,8 +492,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 
 </details>
 <details>
-<summary>스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</summary>
-<a name="#spring-mvc-backend-1"></a>
+<summary>4. 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</summary>
+<a name="spring-mvc-backend-1"></a>
 
 ### 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
 
@@ -504,5 +504,17 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 5. 스프링 MVC - 구조 이해
 6. 스프링 MVC - 기본 기능
 7. 스프링 MVC - 웹 페이지 만들기
+
+#### 2. 서블릿
+
+ - 프로젝트 생성 및 welcome 페이지 추가
+  - Project Metadata
+  - Group: hello
+  - Artifact: servlet
+  - Name: servlet
+  - Package name: hello.servlet
+  - Packaging: War
+  - Java: 11
+
 
 </details>
