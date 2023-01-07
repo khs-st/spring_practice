@@ -542,5 +542,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - 예시: http://localhost:8080/request-param?username=hello&age=20
   - 중복된 파라미터일 경우 getParameterValues()를 사용해야 한다. 중복인 경우에 getParameter() 사용 시 첫 번째 값을 반환한다.
 
-  
+ - HTTP 요청 데이터 - POST HTML Form
+  - 특징
+    - content-type: application/x-www-form-urlencoded
+    - 메시지 바디에 쿼리 파리미터 형식으로 데이터를 전달한다. username=hello&age=20
+
+
 </details>
