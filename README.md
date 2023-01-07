@@ -547,5 +547,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
     - content-type: application/x-www-form-urlencoded
     - 메시지 바디에 쿼리 파리미터 형식으로 데이터를 전달한다. username=hello&age=20
 
+ - HTTP 요청 데이터 - API 메시지 바디 - JSON
+  - JSON 형식 전송 -> JSON 형식으로 파싱할 수  있도록 객체 생성 후 전송
+  - 스프링 부트로 Spring MVC를 선택 시 Json 라이브러리 ObjectMapper 제공
+
+
 
 </details>
