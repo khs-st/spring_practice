@@ -516,5 +516,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - Packaging: War
   - Java: 11
 
+ - HttpServletRequest 개요
+   - HTTP 요청 메시지를 편리하게 사용할 수 있도록 개발자 대신에 HTTP 요청 메시지를 파싱한다. 그리고 그 결과를 HttpServletRequest 객체에 담아서 제공한다.
+   - 임시저장소 기능, 세션 관리 기능이 있다.
+ - HttpServletRequest - 기본 사용법
+   - HttpServletRequest를 통한 HTTP 메시지의 start-line, header 정보 조회 방법 확인
 
 </details>
