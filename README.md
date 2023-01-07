@@ -551,6 +551,13 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - JSON 형식 전송 -> JSON 형식으로 파싱할 수  있도록 객체 생성 후 전송
   - 스프링 부트로 Spring MVC를 선택 시 Json 라이브러리 ObjectMapper 제공
 
+ - HttpServletResponse - 기본 사용법
+  - HTTP 응답 메시지 생성
+    - HTTP 응답코드 지정
+    - 헤더 생성
+    - 바디 생성
+  - 편의 기능 제공
+   - Content-Type, 쿠키, Redirect
 
 
 </details>
