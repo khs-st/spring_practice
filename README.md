@@ -582,6 +582,18 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - 컨트롤러 호출
    - 컨트롤러에서 JSP forward  
    - 클라이언트에게 HTML 응답   
-
+ - View 분리 - v2
+   - 모든 컨트롤러에서 뷰로 이동하는 부분에 중복이 있어 깔끔하지 않음.
+   - 별도로 View를 처리하는 객체를 만들었다.
+   - v2 구조 
+     - HTTP 요청
+     - URL 매핑 정보에서 컨트롤러 조회
+     - 컨트롤러 호출
+     - MyView 반환 
+     - render() 호출
+     - JSP forward
+     - HTML 응답
+   - 컨트롤러가 뷰를 반환하는 특징이 있다. -> view.render()를 호출하여 fowrard 로직 수행 시 JSP가 실행된다.
+   - JSP 만이 아닌 다른 템플릿도 사용할 경우에는 인터페이스로 구현하는게 다양성 활용에 좋다.
 
 </details>
