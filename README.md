@@ -595,5 +595,19 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - HTML 응답
    - 컨트롤러가 뷰를 반환하는 특징이 있다. -> view.render()를 호출하여 fowrard 로직 수행 시 JSP가 실행된다.
    - JSP 만이 아닌 다른 템플릿도 사용할 경우에는 인터페이스로 구현하는게 다양성 활용에 좋다.
+ - Model 추가 - v3
+   - 서블릿 종속성 제거
+     - 요청 파라미터 정보는 Map으로 대신 넘겨 서블릿 기술 몰라도 동작 가능하다.
+     - request 객체를 Model로 사용하는 대신 Model 객체 만들어 반환한다.
+   - 뷰 이름 중복 제거
+   - v3 구조 
+     - HTTP 요청
+     - 컨트롤러 조회
+     - 컨트롤러 호출
+     - ModelView 반환 
+     - viewResolver 호출
+     - MyView 반환
+     - render(model)호출
+     - HTML 응답
 
 </details>
