@@ -610,8 +610,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - render(model)호출
      - HTML 응답
  - 단순하고 실용적인 컨트롤러 - v4
-  - 모델 객체 전달(모델 객체를 프론트 컨트롤러에서 생성하여 넘겨준다.)
-  - ModelView 반환하지않고 ViewName을 직접 반환한다.
+   - 모델 객체 전달(모델 객체를 프론트 컨트롤러에서 생성하여 넘겨준다.)
+   - ModelView 반환하지않고 ViewName을 직접 반환한다.
    - V4 구조 
      - HTTP 요청
      - 컨트롤러 조회
