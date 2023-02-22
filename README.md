@@ -621,5 +621,21 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - MyView 반환
      - render(model)호출
      - HTML 응답     
+ - 유연한 컨트롤러1 - v5
+   - 어댑터 패턴
+     - 다양한 방식의 컨트롤러 인터페이스 사용 가능하도록 변경 
+   - V5 구조 
+     - HTTP 요청
+     - 핸들러(컨트롤러) 조회
+     - 핸드러를 처리할 수 있는 핸들러 어댑터 조회
+     - handle(handler)
+     - 핸들러 어댑터
+     - handler 호출
+     - 핸들러(컨트롤러)
+     - ModelView 반환
+     - viewResolver 호출
+     - MyView 반환
+     - render(model) 호출
+     - HTML 응답
 
 </details>
