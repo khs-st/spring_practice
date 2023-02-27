@@ -637,5 +637,7 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - MyView 반환
      - render(model) 호출
      - HTML 응답
+ - 유연한 컨트롤러2 - v5
+   - 어댑터에 v4 추가
 
 </details>
