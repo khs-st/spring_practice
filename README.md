@@ -656,5 +656,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - 스프링 MVC 컨트롤러 통합
    - 하나의 컨트롤러에 RequestMapping 이용하여 통합
    - RequestMapping 선언하여 중복 제거
-
+ - 스프링 MVC - 실용적인 방식
+   - Model 파라미터
+   - ViewName 직접 반환
+   - @RequestParam 사용(GET 쿼리 파라미터, POST Form 방식 모두 지원)
+   - @RequestMapping -> @GetMapping, @PostMapping 
+   
 </details>
