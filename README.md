@@ -640,4 +640,18 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - 유연한 컨트롤러2 - v5
    - 어댑터에 v4 추가
 
+#### 5. 스프링 MVC - 구조 이해
+
+ - 스프링 MVC 전체 구조
+ - 서블릿으로 회원 관리 웹 애플리케이션 만들기
+   - 회원 등록 폼
+   - 회원 저장
+   - 회원 목록 조회
+ - 스프링 MVC 시작하기
+   - @Controller : 스프링이 자동으로 스프링 빈으로 등록한다.
+   - @RequestMapping 어노테이션을 사용한 컨트롤러 생성
+     - RequestMappingHandlerMapping
+     - RequestMappingHandlerAdapter
+     - 어노테이션 기반의 컨트롤러를 지원하는 핸들러 매핑과 어댑터
+
 </details>
