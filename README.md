@@ -653,5 +653,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - RequestMappingHandlerMapping
      - RequestMappingHandlerAdapter
      - 어노테이션 기반의 컨트롤러를 지원하는 핸들러 매핑과 어댑터
+ - 스프링 MVC 컨트롤러 통합
+   - 하나의 컨트롤러에 RequestMapping 이용하여 통합
+   - RequestMapping 선언하여 중복 제거
 
 </details>
