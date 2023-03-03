@@ -674,7 +674,18 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - 시스템 아웃 콘솔에만 출력하는 것이 아니라, 파일이나 네트워크 등, 로그를 별도의 위치에 남길 수 있다.
      - 특히 파일로 남길 때는 일별, 특정 용량에 따라 로그를 분할하는 것도 가능하다.
      - 성능도 일반 System.out 보다 좋다. (내부 버퍼링, 멀티 쓰레드 등등) 그래서 실무에서는 꼭 로그를 사용해야 한다
- 
+ - 요청 매핑
+   - HTTP 메서드 매핑 축약(GET, POST, PUT, DELETE)
+   - 만약 여기에 다른 RequestMethod를 호출하면 스프링 MVC는 HTTP 405 상태코드(Method Not Allowed)를 반환한다.
+   - PathVariable(경로 변수) 사용, PathVariable 사용 - 다중
+   - 특정 파라미터 조건 매핑
+   - 특정 헤더 조건 매핑 - HTTP 헤더를 사용한다.
+   - 미디어 타입 조건 매핑 - HTTP 요청 Content-Type, consume
+     - HTTP 요청의 Content-Type 헤더를 기반으로 미디어 타입으로 매핑한다.
+     - 만약 맞지 않으면 HTTP 415 상태코드(Unsupported Media Type)을 반환한다
+   - 미디어 타입 조건 매핑 - HTTP 요청 Accept, produce
+     - HTTP 요청의 Accept 헤더를 기반으로 미디어 타입으로 매핑한다.
+     - 만약 맞지 않으면 HTTP 406 상태코드(Not Acceptable)을 반환한다.
 
 
 </details>
