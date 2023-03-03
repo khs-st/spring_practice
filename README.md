@@ -685,7 +685,13 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - 만약 맞지 않으면 HTTP 415 상태코드(Unsupported Media Type)을 반환한다
    - 미디어 타입 조건 매핑 - HTTP 요청 Accept, produce
      - HTTP 요청의 Accept 헤더를 기반으로 미디어 타입으로 매핑한다.
-     - 만약 맞지 않으면 HTTP 406 상태코드(Not Acceptable)을 반환한다.
-
+     - ㅁ만약 맞지 않으면 HTTP 406 상태코드(Not Acceptable)을 반환한다.
+ - 요청 매핑 - API 예시
+   - 회원 관리 API
+     - 회원 목록 조회: GET /users
+     - 회원 등록: POST /users
+     - 회원 조회: GET /users/{userId}
+     - 회원 수정: PATCH /users/{userId}
+     - 회원 삭제: DELETE /users/{userId}
 
 </details>
