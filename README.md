@@ -693,5 +693,66 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - 회원 조회: GET /users/{userId}
      - 회원 수정: PATCH /users/{userId}
      - 회원 삭제: DELETE /users/{userId}
+ - HTTP 요청 - 기본, 헤더 조회
+   - RequestHeaderController 생성 및 @Slf4j 이용한 로그로 헤더 정보 조회
+     - 모든 HTTP 헤더를 MultiValueMap 형식으로 조회해보았다.
+       - MultiValueMap: 하나의 키에 여러 값을 받을 수 있다.(예시: keyA=value1&keyA=value2)
+ - HTTP 요청 파라미터 - 쿼리 파라미터, HTML Form
+   - 클라이언트에서 서버로 요청 데이터를 전달하는 방법 3가지
+     - GET - 쿼리 파라미터
+     - POST - HTML Form
+     - HTTP message body에 데이터 직접 담아 요청
+ - HTTP 요청 파라미터 - @RequestParam
+   - request-param-v2
+     - @RequestParam: 파라미터 이름으로 바인딩
+     - @ResponseBody: View 조회를 무시, HTTP message body에 직접 해당 내용 입력
+   - request-param-v3
+     - HTTP 파라미터 이름이 변수 이름과 같으면 @RequestParam(name="xx") 생략 가능하다.
+   - request-param-v4
+     - String, int 등의 단순 타입이면 @RequestParam 도 생략 가능하다.
+   - requestParamRequired
+     - 파라미터 필수 여부: @RequestParam.required
+       - 만약 해당 값이 없다면 400 예외가 발생한다.
+       - 파라미터 이름만 있고 값이 없는 경우는 빈문자로 통과한다.
+       - 기본형(primitive)에 null 입력 시 500 예외 발생 (예시: int=null -> 해결책은 Integer로 변경하거나 defaultValue를 사용)
+   - requestParamDefault
+     - 파라미터에 값이 없는 경우 defaultValue 를 사용하면 기본 값을 적용할 수 있다.(빈 문자의 경우에도 설정한 기본 값이 적용된다.)
+     - 이미 기본 값 존재하므로 required는 의미가 없다.
+   - requestParamMap
+     - 파라미터를 Map, MultiValueMap으로 조회 할 수 있다.
+       - @RequestParam Map , Map(key=value)
+       - @RequestParam MultiValueMap MultiValueMap(key=[value1, value2, ...] ex) (key=userIds, value=[id1, id2])
+ - HTTP 요청 파라미터 - @ModelAttribute
+   - @ModelAttribute 적용 - modelAttributeV1
+     - @Data 이용하여 데이터 생성(@Getter , @Setter , @ToString , @EqualsAndHashCode , @RequiredArgsConstructor 를 자동으로 적용해준다.)
+     - 요청 파라미터 이름으로 HelloData 객체의 프로퍼티를 찾아 setter 호출하여 파라미터의 값을 입력(바인딩)한다.
+   - @ModelAttribute 생략 - modelAttributeV2
+     - @ModelAttribute 는 생략할 수 있다. 하지만 RequestParam도 생략할 수 있어 혼란 발생 가능하다.
+     - 스프링에서는 해당 생략 시 아래의 규칙을 적용한다.
+       - String , int , Integer 같은 단순 타입 = @RequestParam
+       - 나머지 = @ModelAttribute (argument resolver 로 지정해둔 타입 외)
+ - HTTP 요청 메시지 - 단순 텍스트
+   - HTTP message body에 데이터 직접 담아 요청
+     - HTTP API에서 주로 사용, JSON, XML, TEXT
+     - 데이터 형식은 주로 JSON 사용
+     = POST, PUT, PATCH
+   - Body row, Text 선택
+   - Input, Output 스트림, Reader
+   - HttpEntity: HTTP header, body 정보를 편리하게 조회
+     - 메시지 바디 정보를 직접 조회
+     - 요청 파라미터를 조회하는 기능과 관계 없다.
+     - HTTPEntity는 응답에도 사용 가능하다.
+       - 메시지 바디 정보 직접 반환
+       - 헤더 정보 포함 가능
+       - view 조회X
+   - @RequestBody: 바디 정보를 편리하게 조회 할 수 있다.
+     - 헤더 정보가 필요하다면 @RequestHeader나 HttpEntity를 사용하면 된다.
+     - 메시지 바디를 직접 조회하는 기능은 요청 파라미터를 조회하는 @RequestParam ,
+    @ModelAttribute 와는 전혀 관계가 없다.
+   - @ResponseBody: 응답 결과를 HTTP 메시지 바디에 직접 담아서 전달 가능하다.(view 사용X)
+   - 정리
+     - 요청 파라미터를 조회하는 기능: @RequestParam , @ModelAttribute
+     - HTTP 메시지 바디를 직접 조회하는 기능: @RequestBody
+
 
 </details>
