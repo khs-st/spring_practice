@@ -753,6 +753,23 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - 정리
      - 요청 파라미터를 조회하는 기능: @RequestParam , @ModelAttribute
      - HTTP 메시지 바디를 직접 조회하는 기능: @RequestBody
-
+ - HTTP 요청 메시지 - JSON
+   - 문자로 된 JSON 데이터를 Jackson 라이브러리인 objectMapper 를 사용해서 자바 객체로 변환한다.
+   - @RequestBody 객체 파라미터 : @RequestBody 에 직접 만든 객체 가능하다.
+   - @RequestBody는 생략 불가능
+   - 응답의 경우에도 @ResponseBody 를 사용하면 해당 객체를 HTTP 메시지 바디에 직접 넣어줄 수 있다.
+ - HTTP 응답 - 정적 리소스, 뷰 템플릿
+   - 정적 리소스(스프링부트는 이 디렉토리(/static , /public , /resources , /META-INF/resources)에 있는 정적 리소스를 제공한다.)
+   - 뷰 템플릿 사용(경로: src/main/resources/templates)
+   - HTTP 메시지 사용: HTTP 메시지 바디에 JSON 같은 형식으로 데이터를 실어 보낸다.
+   - String을 반환하는 경우 - View or HTTP 메시지
+     - @ResponseBody 있는 경우는 뷰를 찾아 렌더링, 없는 경우는 HTTP 메시지 바디에 직접 입력된다.
+   - Void를 반환하는 경우
+     - @Controller를 사용하고 HTTP 메시지 바디를 처리하는 파라미터가 없으면 요청 URL을 참고해서 논리 뷰 이름으로 사용(권장하지 않는 방식이다.)
+ - HTTP 응답 - HTTP API, 메시지 바디에 직접 입력
+   - @ResponseBody를 사용하면 view를 사용하지 않고 HTTP 메시지 컨버터를 통해 HTTP 메시지를 직접 입력 할 수 있다.
+   - ResponseEntity는 HTTP 응답 코드 설정이 가능한데 @ResponseBody를 사용하면 이런 것을 설정하기 까다롭다. 그래서 @ResponseStatus(HttpStatus.OK)를 사용하면 응답 코드 설정이 가능하다.
+ - HTTP 메시지 컨버터
+ - 요청 매핑 헨들러 어뎁터 구조
 
 </details>
