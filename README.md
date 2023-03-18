@@ -772,4 +772,16 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - HTTP 메시지 컨버터
  - 요청 매핑 헨들러 어뎁터 구조
 
+#### 7. 스프링 MVC - 웹 페이지 만들기
+
+ - 프로젝트 생성
+   - Project Metadata
+     - Group: hello
+     - Artifact: item-service
+     - Name: item-service
+     - Package name: hello.itemservice
+     - Packaging: Jar (주의!)
+     - Java: 11
+     - Dependencies: Spring Web, Thymeleaf, Lombok
+
 </details>
