@@ -783,5 +783,9 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - Packaging: Jar (주의!)
      - Java: 11
      - Dependencies: Spring Web, Thymeleaf, Lombok
-
+ - 상품 도메인 개발
+   - Item 상품객체 생성
+   - ItemRepository 상품저장소 생성
+   - ItemRepositoryTest 상품저장소 테스트 생성 후 테스트 완료 
+   
 </details>
