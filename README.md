@@ -787,5 +787,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - Item 상품객체 생성
    - ItemRepository 상품저장소 생성
    - ItemRepositoryTest 상품저장소 테스트 생성 후 테스트 완료 
-   
+ - 상품 서비스 HTML
+   - bootstrap.min.css 파일 추가
+   - 상품목록 HTML, 상품 상세 HTML, 상품 등록 폼 HTML, 상품 수정 폼 HTML 추가
+
 </details>
