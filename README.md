@@ -790,5 +790,10 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - 상품 서비스 HTML
    - bootstrap.min.css 파일 추가
    - 상품목록 HTML, 상품 상세 HTML, 상품 등록 폼 HTML, 상품 수정 폼 HTML 추가
+ - 상품 목록 - 타임리프
+   - BasicController 생성 및 상품목록 테스트용 데이터 추가(@PostConstruct 이용)
+   - @RequiredArgsConstructor
+     - final 이 붙은 멤버변수만 사용해서 생성자를 자동으로 만들어줌.
+   - 뷰 템플릿에 타임리프 추가
 
 </details>
