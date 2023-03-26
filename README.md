@@ -2,10 +2,10 @@
 <h2>이 저장소는 [초급~중급] 우아한형제들 기술이사 김영한의 스프링 완전 정복 수업을 듣고 공부 내용을 기록한 저장소입니다.</h2>
 <h3>#강의 링크</h3>
 <ul>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank" rel="noopener noreferrer">스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술&nbsp;</a></span> <strong>&nbsp;(22.01.08 ~ 22.01.16)</strong></li>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8" target="_blank" rel="noopener noreferrer">스프링 핵심 원리 - 기본편</a></span><strong>&nbsp;(22.01.26 ~ 22.02.23)</strong></li>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" target="_blank" rel="noopener noreferrer">모든 개발자를 위한 HTTP 웹 기본 지식</a></span><strong>&nbsp;(22.02.25 ~ )</strong></li>
-<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1" target="_blank" rel="noopener">스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</a></span><strong>&nbsp;(22.08.15 ~ )</strong></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank" rel="noopener noreferrer">스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술&nbsp;</a></span> <strong>&nbsp;</strong></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8" target="_blank" rel="noopener noreferrer">스프링 핵심 원리 - 기본편</a></span><strong>&nbsp;</strong></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" target="_blank" rel="noopener noreferrer">모든 개발자를 위한 HTTP 웹 기본 지식</a></span><strong>&nbsp;</strong></li>
+<li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1" target="_blank" rel="noopener">스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</a></span><strong>&nbsp;</strong></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-2" target="_blank" rel="noopener">스프링 MVC 2편 - 백엔드 웹 개발 활용 기술</a></span></li>
 <li><span style="color: #0075ff;"><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89%ED%8E%B8" target="_blank" rel="noopener">스프링 핵심 원리 - 고급편</a></span></li>
 </ul>
@@ -804,5 +804,41 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    -POST 등록 후 새로고침 시 서버에 마지막 데이터 재전송 오류 수정  
  - RedirectAttributes
    - 사용자 입장에서 저장 유무를 보기 힘들어 RedirectAttributes 이용하여 메시지 추가
+
+</details>
+
+<details>
+<summary>5. 스프링 MVC 2편 - 백엔드 웹 개발 핵심 기술</summary>
+<a name="spring-mvc-backend-2"></a>
+
+### 5. 스프링 MVC 2편 - 백엔드 웹 개발 핵심 기술
+
+### 강의 목차
+1. 타임리프 - 기본 기능
+2. 타임리프 - 스프링 통합과 폼
+3. 메시지, 국제화
+4. 검증1 - Validation
+5. 검증2 - Bean Validation
+6. 로그인 처리1 - 쿠키, 세션
+7. 로그인 처리2 - 필터, 인터셉터
+8. 예외 처리와 오류 페이지
+9. API 예외 처리
+10. 스프링 타입 컨버터
+11. 파일 업로드
+
+#### 1. 타임리프 - 기본 기능
+
+- 프로젝트 생성 및 index.html 생성
+  - Project: Gradle - Groovy Project
+    - Language: Java
+    - Spring Boot: 2.7.9
+    - Project Metadata
+    - Group: hello
+    - Artifact: thymeleaf-basic
+    - Name: thymeleaf-basic
+    - Package name: hello.thymeleaf
+    - Packaging: Jar
+    - Java: 11
+    - Dependencies: Spring Web, Lombok , Thymeleaf
 
 </details>
