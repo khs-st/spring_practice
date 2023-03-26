@@ -800,6 +800,9 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - 상품 등록 폼 매핑값 추가
    - 상품 등록 폼 생성
    - 상품 등록 매핑값 추가
-
+ - POST, Redirect GET
+   -POST 등록 후 새로고침 시 서버에 마지막 데이터 재전송 오류 수정  
+ - RedirectAttributes
+   - 사용자 입장에서 저장 유무를 보기 힘들어 RedirectAttributes 이용하여 메시지 추가
 
 </details>
