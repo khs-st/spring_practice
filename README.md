@@ -795,5 +795,11 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - @RequiredArgsConstructor
      - final 이 붙은 멤버변수만 사용해서 생성자를 자동으로 만들어줌.
    - 뷰 템플릿에 타임리프 추가
+ - 상품 상세 및 등록
+   - 상품 상세 매핑값 추가
+   - 상품 등록 폼 매핑값 추가
+   - 상품 등록 폼 생성
+   - 상품 등록 매핑값 추가
+
 
 </details>
