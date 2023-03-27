@@ -840,5 +840,13 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
     - Packaging: Jar
     - Java: 11
     - Dependencies: Spring Web, Lombok , Thymeleaf
+ - 타임리프 텍스트 - text,utext
+ - 변수 - springEL
+ - 기본객체들
+ - 유틸리티 객체와 날짜
+ - URL 링크
+ - 리터럴
+ - 연산  
+
 
 </details>
