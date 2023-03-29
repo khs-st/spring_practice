@@ -847,6 +847,11 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - URL 링크
  - 리터럴
  - 연산  
-
+ - 속성 값 설정
+ - 반복
+ - 조건부 평가
+ - 주석
+ - 블록
+ - 자바스크립트 인라인
 
 </details>
