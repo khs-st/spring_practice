@@ -853,5 +853,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - 주석
  - 블록
  - 자바스크립트 인라인
+ - 템플릿 조각
+ - 템플릿 레이아웃1, 2
+
 
 </details>
