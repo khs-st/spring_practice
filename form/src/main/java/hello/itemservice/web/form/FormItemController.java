@@ -1,5 +1,6 @@
 package hello.itemservice.web.form;
 
+import hello.itemservice.domain.item.DeliveryCode;
 import hello.itemservice.domain.item.Item;
 import hello.itemservice.domain.item.ItemRepository;
 import hello.itemservice.domain.item.ItemType;
@@ -10,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,7 @@ public class FormItemController {
     private final ItemRepository itemRepository;
 
     // @ModelAttribute 로 컨트롤러에 있는 별도의 메서드에 적용이 가능하다.
+    // 등록 지역
     @ModelAttribute("regions")
     public Map<String, String> regions(){
         Map<String, String> regions = new LinkedHashMap<>();
@@ -34,10 +37,20 @@ public class FormItemController {
         //model.addAttribute("regions", regions);
     }
 
+    // 상품 종류
     @ModelAttribute("itemTypes")
     public ItemType[] itemTypes(){
         //해당 ENUM의 모든 정보를 배열로 반환
         return ItemType.values();
+    }
+
+    @ModelAttribute("deliveryCodes")
+    public List<DeliveryCode> deliveryCode(){
+        List<DeliveryCode> deliveryCodes = new ArrayList<>();
+        deliveryCodes.add(new DeliveryCode("FAST", "빠른 배송"));
+        deliveryCodes.add(new DeliveryCode("NORMAL", "일반 배송"));
+        deliveryCodes.add(new DeliveryCode("SLOW", "느린 배송"));
+        return deliveryCodes;
     }
 
     @GetMapping

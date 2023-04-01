@@ -875,5 +875,6 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
  - 체크 박스 - 멀티(등록 지역 추가)
  - 라디오 버튼(상품 종류 추가)
    - @ModelAttribute로 모델에 상품 종류(ENUM 타입)담아서 전달
+ - SELECT 박스(배송 방식 추가)
 
 </details>
