@@ -873,5 +873,7 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
      - 빠른 배송, 일반 배송, 느린 배송(select 박스)
  - 체크 박스 단일1, 단일2(판매여부 추가)
  - 체크 박스 - 멀티(등록 지역 추가)
- 
+ - 라디오 버튼(상품 종류 추가)
+   - @ModelAttribute로 모델에 상품 종류(ENUM 타입)담아서 전달
+
 </details>

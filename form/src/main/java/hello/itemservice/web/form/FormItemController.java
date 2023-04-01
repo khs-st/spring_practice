@@ -2,6 +2,7 @@ package hello.itemservice.web.form;
 
 import hello.itemservice.domain.item.Item;
 import hello.itemservice.domain.item.ItemRepository;
+import hello.itemservice.domain.item.ItemType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -31,6 +32,12 @@ public class FormItemController {
         return regions;
         // 아래코드 자동으로 입력된다고 보면 된다.
         //model.addAttribute("regions", regions);
+    }
+
+    @ModelAttribute("itemTypes")
+    public ItemType[] itemTypes(){
+        //해당 ENUM의 모든 정보를 배열로 반환
+        return ItemType.values();
     }
 
     @GetMapping
