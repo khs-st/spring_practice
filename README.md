@@ -860,7 +860,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
 
  - 프로젝트 설정
    - MVC 1편에서 만들었던 상품 프로젝트 이용
-   
+ - 입력 폼 처리
+   - model 추가 후 addForm, editForm 타임리프 구문으로 수정
 
 
 </details>
