@@ -877,4 +877,11 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
    - @ModelAttribute로 모델에 상품 종류(ENUM 타입)담아서 전달
  - SELECT 박스(배송 방식 추가)
 
+#### 3. 메시지, 국제화
+
+ - 프로젝트 설정
+   - 스프링 통합과 폼에서 개발한 상품 관리 프로젝트를 일부 수정하여 상품 프로젝트 이용
+
+
+
 </details>
