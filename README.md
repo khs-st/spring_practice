@@ -900,5 +900,6 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
       - 가격 * 수량의 합은 10,000원 이상
   - 검증 직접 처리 - 개발
     - V1: 상품등록 시 검증 코드 추가
+    - V2(BindingResult1): ValidationItemControllerV2 컨트롤러 생성 후 BindingResult 추가
 
 </details>
