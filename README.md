@@ -901,5 +901,22 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
   - 검증 직접 처리 - 개발
     - V1: 상품등록 시 검증 코드 추가
     - V2(BindingResult1): ValidationItemControllerV2 컨트롤러 생성 후 BindingResult 추가
+  - BindingResult
+    - BindingResult는 인터페이스, Errors 인터페이스를 상속받고 있다.    
+    - BindingResult에 검증 오류 적용하는 3가지 방법
+       - @ModelAttribute 의 객체에 타입 오류 등으로 바인딩이 실패하는 경우 스프링이 FieldError 생성해서 BindingResult 에 넣어준다.
+       - 개발자가 직접 넣어준다.
+       - Validator 사용
+  - FieldError, ObjectError
+    - FieldError 생성자 파라미터 목록
+      - objectName : 오류가 발생한 객체 이름
+      - field : 오류 필드
+      - rejectedValue : 사용자가 입력한 값(거절된 값)
+      - bindingFailure : 타입 오류 같은 바인딩 실패인지, 검증 실패인지 구분 값
+      - codes : 메시지 코드
+      - arguments : 메시지에서 사용하는 인자
+      - defaultMessage : 기본 오류 메시지
+    - 오류 발생 시 사용자 입력 값 유지
+      - 스프링의 바인딩 오류 처리는 FieldError를 생성하면서 사용자가 입력한 값을 넣어두고 해당 오류를 BindingResult에 담아 컨트롤러를 호출한다.
 
 </details>
