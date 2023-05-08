@@ -928,6 +928,8 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
         - arguments : 메시지에서 사용하는 인자
         - defaultMessage : 기본 오류 메시지
       - errors 메시지 파일 생성하여 codes 파라미터 이용한 오류 메시지를 출력하였다.
+    - 오류코드와 메시지 처리2
+      - BindingReslut가 제공하는 rejectValue(), reject() 사용하여 FieldError, ObjectError를 직접 생성하지 않고, 검증 오류 코드 단순화하였다.
 
 
 
