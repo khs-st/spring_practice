@@ -930,7 +930,13 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
       - errors 메시지 파일 생성하여 codes 파라미터 이용한 오류 메시지를 출력하였다.
     - 오류코드와 메시지 처리2
       - BindingReslut가 제공하는 rejectValue(), reject() 사용하여 FieldError, ObjectError를 직접 생성하지 않고, 검증 오류 코드 단순화하였다.
-
+    - 오류코드와 메시지 처리3 & 4
+      - MessageCodesResolver 인터페이스의 기본 구현체인 DefaultMessageCodesResolver에 대해 테스트코드를 작성하여 알아보았다.
+      - rejectValue(), reject()의 동작방식은 내부에서 MessageCodesResolver를 사용하고 여기에서 메시지코드들을 생성한다. 오류코드는 여러 오류 코드를 가질 수 있다.
+      - DefaultMessageCodesResolver의 기본 메시지 생성 규칙
+        - 객체 오류의 경우 다음 순서로 2가지 생성
+        - 1.: code + "." + object name
+        - 2.: code
 
 
 </details>
