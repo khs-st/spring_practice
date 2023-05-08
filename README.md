@@ -918,5 +918,17 @@ MemberService에서 memberRepostiory의 내용물이 달라질 가능성이 있�
       - defaultMessage : 기본 오류 메시지
     - 오류 발생 시 사용자 입력 값 유지
       - 스프링의 바인딩 오류 처리는 FieldError를 생성하면서 사용자가 입력한 값을 넣어두고 해당 오류를 BindingResult에 담아 컨트롤러를 호출한다.
+    - 오류코드와 메시지 처리1
+      - FieldError 생성자의 파라미터
+        - objectName : 오류가 발생한 객체 이름
+        - field : 오류 필드
+        - rejectedValue : 사용자가 입력한 값(거절된 값)
+        - bindingFailure : 타입 오류 같은 바인딩 실패인지, 검증 실패인지 구분 값
+        - codes : 메시지 코드
+        - arguments : 메시지에서 사용하는 인자
+        - defaultMessage : 기본 오류 메시지
+      - errors 메시지 파일 생성하여 codes 파라미터 이용한 오류 메시지를 출력하였다.
+
+
 
 </details>
